@@ -1,9 +1,9 @@
 import { fastify } from 'fastify';
-import { DatabasePostgres } from './database-postgres.js';
+import { databasePostgres } from './database-postgres.js';
 
 const server = fastify();
 
-const database = new DatabasePostgres()
+const database = new databasePostgres()
 
 // Request Body
 
