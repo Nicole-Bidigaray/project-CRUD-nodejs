@@ -1,12 +1,11 @@
-import { fastify } from 'fastify';
+import { fastify } from 'fastify'
 import { databasePostgres } from './database-postgres.js';
 
-const server = fastify();
+const server = fastify()
 
-const database = new databasePostgres()
+const database = new databasePostgres
 
 // Request Body
-
 server.post('/videos', async (request, reply) => {
   const { title, description, duration } = request.body
     await database.create({
